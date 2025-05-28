@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  body, p, li {
+    font-family: 'Work Sans', sans-serif;
+  }
+
+
+  
+  
+.logo {
+    width: 120px;
+    height: auto;
+    
+}
+
+.active {
+    font-weight: bold;
+}
+
+:root {
+    /* Primary brand color (green from logo) */
+    --color-primary: #4B7753;
+  
+    /* Background color */
+    --color-background: #F9F9F7;
+  
+    /* Accent green (for hovers, highlights) */
+    --color-accent: #6A9C74;
+  
+    /* Dark green (for headers, buttons, strong contrast) */
+    --color-dark: #2F4E36;
+  
+    /* Soft gray (for borders, lines, dividers) */
+    --color-gray: #DDE2DC;
+  }
+  
+  /* Example utility usage */
+  body {
+    background-color: var(--color-background);
+    color: var(--color-dark);
+  }
+  
+  a {
+    color: var(--color-primary);
+  }
+  
+  a:hover {
+    color: var(--color-accent);
+  }
+  
+  hr {
+    border-color: var(--color-gray);
+  }
+
+  
+
+/*test css for hero*/
+.hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 12px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero h1 {
+      font-size: 3.5rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+    }
+  }
