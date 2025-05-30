@@ -604,18 +604,37 @@
   </section>
 
 <!--Nav Dropdown auto collapse-->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const collapseInstance = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
 
-    <script>
-      document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          const navbarCollapse = document.querySelector('.navbar-collapse');
-          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-          if (bsCollapse && navbarCollapse.classList.contains('show')) {
-            bsCollapse.hide();
-          }
-        });
-      });
-    </script>
+  // Prevent navbar collapse on dropdown toggle clicks (keeps dropdown open)
+  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', e => e.stopPropagation());
+  });
+
+  // Collapse navbar immediately on normal nav links (excluding dropdown toggles)
+  document.querySelectorAll('.navbar-collapse .nav-link:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992) {
+        collapseInstance.hide();
+      }
+    });
+  });
+
+  // When dropdown is hidden (fully closed), collapse the navbar
+  navbarCollapse.querySelectorAll('.dropdown').forEach(dropdown => {
+    dropdown.addEventListener('hidden.bs.dropdown', () => {
+      // Only collapse navbar if it's open and screen is small
+      if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+        collapseInstance.hide();
+      }
+    });
+  });
+});
+</script>
+
 
       <!--Bootstrap JS-->
     

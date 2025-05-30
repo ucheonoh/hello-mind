@@ -83,3 +83,13 @@ li {
     border: 2px solid var(--color-dark);
 }
 
+.sect {
+  scroll-margin-top: 180px;
+  }
+ 
+ 
+ .help {
+  scroll-margin-top: 110px;
+ }
+ 
+
