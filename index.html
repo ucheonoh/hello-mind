@@ -18,6 +18,7 @@
 
   <body>
     <!--Navbar-->
+    
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
       <div class="container-fluid">
@@ -28,24 +29,33 @@
             class="d-inline-block align-text-top logo"
           />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#topics">Topics</a>
-            <a class="nav-link" href="#resources">Resources</a>
-            <a class="nav-link" href="#need-to-talk">Need to talk?</a>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#topics">Topics</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              
+              <ul class="dropdown-menu dropdown-menu-edge">
+                <li><a class="dropdown-item" href="#resources">Organisations</a></li>
+                <li><a class="dropdown-item" href="#reading-list">Mindful Reading</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#need-to-talk">Need to Talk?</a>
+            </li>
+            
+          </ul>
         </div>
       </div>
     </nav>
@@ -111,11 +121,12 @@
 
     <!--Common Issues-->
 
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light sect" id="topics">
       <div class="container">
-        <h2 class="mb-4 text-center" id="topics">Common Challenges</h2>
+        <h2 class="mb-4 text-center">Common Challenges</h2>
         <div class="row g-4">
-          <!-- Card 1 -->
+         
+          <!-- Overwhelmed -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -131,7 +142,7 @@
             </div>
           </div>
 
-          <!-- Card 2 -->
+          <!-- Low Motivation -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -140,14 +151,14 @@
                   Struggling to find energy or interest in things you used to
                   enjoy? This is a common sign of emotional fatigue.
                 </p>
-                <a href="#motivation-tools" class="btn mt-auto card-btn"
+                <a href="#low-motivation" class="btn mt-auto card-btn"
                   >Learn More</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- Card 3 -->
+          <!-- Sleep Difficulties -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -163,7 +174,7 @@
             </div>
           </div>
 
-          <!-- Card 4 -->
+          <!-- Constant Worry -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -172,14 +183,14 @@
                   That ongoing loop of "what ifs" can drain your energy. Anxiety
                   doesn’t have to control your day.
                 </p>
-                <a href="#worry-support" class="btn mt-auto card-btn"
+                <a href="#constant-worry" class="btn mt-auto card-btn"
                   >Learn More</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- Card 5 -->
+          <!-- Social Withdrawal -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -188,14 +199,14 @@
                   Avoiding people or isolating yourself may be a sign you're
                   emotionally overwhelmed or mentally drained.
                 </p>
-                <a href="#connection-tips" class="btn mt-auto card-btn"
+                <a href="#social-withdrawal" class="btn mt-auto card-btn"
                   >Learn More</a
                 >
               </div>
             </div>
           </div>
 
-          <!-- Card 6 -->
+          <!-- Neg Self Talk -->
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm">
               <div class="card-body d-flex flex-column">
@@ -204,7 +215,7 @@
                   When your inner voice becomes critical or harsh, it can affect
                   confidence and self-worth.
                 </p>
-                <a href="#self-talk" class="btn mt-auto card-btn">Learn More</a>
+                <a href="#negative-self-talk" class="btn mt-auto card-btn">Learn More</a>
               </div>
             </div>
           </div>
@@ -214,7 +225,7 @@
 
     <!--helplines-->
     
-    <section id="need-to-talk" class="py-5 bg-white border-top">
+    <section id="need-to-talk" class="py-5 bg-white border-top sect">
       <div class="container">
         <div class="text-center mb-4">
           <h2>Need to Talk?</h2>
@@ -265,7 +276,7 @@
       </div>
     </section>
     
-   
+   <!--Carousel 2-->
     <div
       id="affirmationCarousel"
       class="carousel slide text-center my-3"
@@ -322,14 +333,14 @@
     
     <!--Resources-->
 
-    <section id="resources" class="py-5 bg-light">
+    <section id="resources" class="py-5 bg-light sect">
       <div class="container">
         <h2 class="text-center mb-4">Mental Health Resources</h2>
         <p class="text-center mb-5">Helpful links and support services you can trust.</p>
    
         <!-- Resource Block 1 -->
         <div class="d-flex flex-column flex-md-row align-items-center mb-5">
-          <img src="" alt="Mind UK" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
+          <img src="assets/images/mind-logo.png" alt="Mind UK" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
           <div>
             <h5>Mind (UK)</h5>
             <p class="mb-1">Provides advice and support for anyone experiencing a mental health problem. Offers tools and campaigns for awareness.</p>
@@ -339,7 +350,7 @@
    
         <!-- Resource Block 2 -->
         <div class="d-flex flex-column flex-md-row align-items-center mb-5">
-          <img src="" alt="Mental Health Foundation" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
+          <img src="assets/images/mhf-logo.png" alt="Mental Health Foundation" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
           <div>
             <h5>Mental Health Foundation</h5>
             <p class="mb-1">Focuses on prevention, mental health research, and building public understanding through accessible resources.</p>
@@ -349,7 +360,7 @@
    
         <!-- Resource Block 3 -->
         <div class="d-flex flex-column flex-md-row align-items-center mb-5">
-          <img src="" alt="CALM Zone" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
+          <img src="assets/images/calm-logo.jpg" alt="CALM Zone" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
           <div>
             <h5>CALM (Campaign Against Living Miserably)</h5>
             <p class="mb-1">Leads campaigns and provides support services to reduce suicide rates, especially among men.</p>
@@ -359,7 +370,7 @@
    
         <!-- Resource Block 4 -->
         <div class="d-flex flex-column flex-md-row align-items-center">
-          <img src="" alt="Headspace" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
+          <img src="assets/images/Headspace-logo.jpg" alt="Headspace" class="rounded-circle me-md-4 mb-3 mb-md-0" width="120" height="120">
           <div>
             <h5>Headspace</h5>
             <p class="mb-1">A digital platform offering guided meditations, mindfulness exercises, and tools for managing stress and sleep.</p>
@@ -368,26 +379,19 @@
         </div>
       </div>
     </section>
- 
-
-
-    
-    
-
-   
-    
 
     <script>
-        document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
-          link.addEventListener('click', () => {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-            if (bsCollapse && navbarCollapse.classList.contains('show')) {
-              bsCollapse.hide();
-            }
-          });
+      document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse && navbarCollapse.classList.contains('show')) {
+            bsCollapse.hide();
+          }
         });
-      </script>
+      });
+    </script>
+
       
     <!--Bootstrap JS-->
     <script
