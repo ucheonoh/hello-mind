@@ -991,6 +991,90 @@
       </div>
     </section>
 
+
+
+
+
+<!-- Modal Form -->
+<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addBookModalLabel">Suggest a Book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="suggestionForm">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="bookTitle" class="form-label">Book Title</label>
+            <input type="text" class="form-control" id="bookTitle" placeholder="Enter the book title" required>
+          </div>
+          <div class="mb-3">
+            <label for="bookAuthor" class="form-label">Author</label>
+            <input type="text" class="form-control" id="bookAuthor" placeholder="Enter the author's name" required>
+          </div>
+          <div class="mb-3">
+            <label for="bookNotes" class="form-label">Why You Recommend It</label>
+            <textarea class="form-control" id="bookNotes" rows="3" placeholder="Optional notes about the book..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn card-btn">Submit Suggestion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+ </div>
+ 
+ <!-- Success Modal -->
+ <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow-lg">
+      <div class="modal-header">
+        <h5 class="modal-title text-success" id="successModalLabel">Suggestion Submitted</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Thank you for your book suggestion! We appreciate your contribution to the community.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+ </div>
+ 
+ <!--Modal JS-->
+ 
+ 
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const suggestionForm = document.getElementById('suggestionForm');
+    const addBookModal = new bootstrap.Modal(document.getElementById('addBookModal'));
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+ 
+ 
+    suggestionForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+ 
+ 
+    
+ 
+ 
+      // Reset the form
+      suggestionForm.reset();
+ 
+ 
+      // Hide the suggestion modal
+      addBookModal.hide();
+ 
+ 
+      // Show the success modal
+      successModal.show();
+    });
+  });
+ </script>
+
     <!--Nav Dropdown auto collapse-->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
