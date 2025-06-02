@@ -32,6 +32,7 @@ Hello Mind is a mental health awareness website offering calming design, accessi
 - **Repetitive Code Generation**: Provided AI with initial code blocks for cards and tables, promtped to duplicate and fill content for efficiency.
 - **Design**: Helped generate calming colour palette and select suitable typography
 - **Assets**: AI-generated background images and placeholder photos
+- **Java Script**: AI aided with vanilla javascript for Modal functionality, aswell as correcting navbar collapse behaviour
 
 
 
