@@ -5,6 +5,8 @@ Hello Mind is a mental health awareness website offering calming design, accessi
 
 ---
 
+! [Device Mockups](assets/images/mockups.png)
+
 ## Features
 - Responsive layout (mobile, tablet, desktop)
 - Calming hero section with welcoming message
