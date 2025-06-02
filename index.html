@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Mind</title>
 
     <!--Bootstrap CSS-->
@@ -11,9 +11,9 @@
       rel="stylesheet"
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
-    >
+    />
     <!--Custom CSS-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
   <body>
@@ -26,7 +26,7 @@
             src="assets/images/hm-logo.png"
             alt="Hello Mind Logo"
             class="d-inline-block align-text-top logo"
-          >
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -81,17 +81,15 @@
 
     <header>
       <section class="hero">
-        <img src="assets/images/hm-head.png" id="hero-logo" style="height:100px;">
+        <img
+          src="assets/images/hm-head.png"
+          id="hero-logo"
+          style="height: 100px"
+        />
         <h2>IT's ok. YOU don't have to be.</h2>
         <!--Carousel-->
       </section>
     </header>
-
- 
-
-    
-
-      
 
     <!--Common Issues-->
 
@@ -334,7 +332,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <hr>
+    <hr />
 
     <!--Resources-->
 
@@ -949,90 +947,198 @@
       </div>
     </section>
 
+    <!--Footer-->
 
-
-
-
-<!-- Modal Form -->
-<div class="modal fade" id="addBookModal" tabindex="-1" aria-labelledby="addBookModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content shadow-lg">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addBookModalLabel">Suggest a Book</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form id="suggestionForm">
-        <div class="modal-body">
-          <div class="mb-3">
-            <label for="bookTitle" class="form-label">Book Title</label>
-            <input type="text" class="form-control" id="bookTitle" placeholder="Enter the book title" required>
+    <footer class="py-5 border-top">
+      <div class="container">
+        <div class="row">
+          <!-- Social Media -->
+          <div class="col-md-4 mb-4 mb-md-0 text-center text-md-start">
+            <h5>Follow Us</h5>
+            <a href="https://www.instagram.com/" class="me-3 social-media" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" class="me-3 social-media" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/" class="me-3 social-media" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
           </div>
-          <div class="mb-3">
-            <label for="bookAuthor" class="form-label">Author</label>
-            <input type="text" class="form-control" id="bookAuthor" placeholder="Enter the author's name" required>
+
+          <!-- Helplines -->
+          <div class="col-md-4 mb-4 mb-md-0 text-center">
+            <h5>Need Support?</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="tel:116123" class="text-decoration-none"
+                  >Samaritans: 116 123</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.mind.org.uk/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Mind</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://giveusashout.org/"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Shout (Text 85258)</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="mb-3">
-            <label for="bookNotes" class="form-label">Why You Recommend It</label>
-            <textarea class="form-control" id="bookNotes" rows="3" placeholder="Optional notes about the book..."></textarea>
+
+          <!-- Affirmation -->
+          <div class="col-md-4 text-center text-md-end">
+            <h5>Remember</h5>
+            <p class="mb-0 fst-italic">
+              "You are not alone. Things can and will get better."
+            </p>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn card-btn">Submit Suggestion</button>
-        </div>
-      </form>
-    </div>
-  </div>
- </div>
- 
 
- <!-- Success Modal -->
- <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content shadow-lg">
-      <div class="modal-header">
-        <h5 class="modal-title text-success" id="successModalLabel">Suggestion Submitted</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Footer Bottom -->
+        <div class="text-center pt-4 mt-4 border-top border-secondary">
+          <small>&copy; 2025 Hello Mind. All rights reserved.</small>
+        </div>
       </div>
-      <div class="modal-body">
-        <p>Thank you for your book suggestion! We appreciate your contribution to the community.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+    </footer>
+
+    <!-- Modal Form -->
+    <div
+      class="modal fade"
+      id="addBookModal"
+      tabindex="-1"
+      aria-labelledby="addBookModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content shadow-lg">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addBookModalLabel">Suggest a Book</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <form id="suggestionForm">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="bookTitle" class="form-label">Book Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookTitle"
+                  placeholder="Enter the book title"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookAuthor"
+                  placeholder="Enter the author's name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookNotes" class="form-label"
+                  >Why You Recommend It</label
+                >
+                <textarea
+                  class="form-control"
+                  id="bookNotes"
+                  rows="3"
+                  placeholder="Optional notes about the book..."
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn card-btn">
+                Submit Suggestion
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
- </div>
- 
- <!--Modal JS-->
- 
- 
- <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const suggestionForm = document.getElementById('suggestionForm');
-    const addBookModal = new bootstrap.Modal(document.getElementById('addBookModal'));
-    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
- 
- 
-    suggestionForm.addEventListener('submit', (event) => {
-      event.preventDefault();
- 
- 
-    
- 
- 
-      // Reset the form
-      suggestionForm.reset();
- 
- 
-      // Hide the suggestion modal
-      addBookModal.hide();
- 
- 
-      // Show the success modal
-      successModal.show();
-    });
-  });
- </script>
+
+    <!-- Success Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow-lg">
+          <div class="modal-header">
+            <h5 class="modal-title text-success" id="successModalLabel">
+              Suggestion Submitted
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Thank you for your book suggestion! We appreciate your
+              contribution to the community.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal JS-->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const suggestionForm = document.getElementById("suggestionForm");
+        const addBookModal = new bootstrap.Modal(
+          document.getElementById("addBookModal")
+        );
+        const successModal = new bootstrap.Modal(
+          document.getElementById("successModal")
+        );
+
+        suggestionForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+
+          // Reset the form
+          suggestionForm.reset();
+
+          // Hide the suggestion modal
+          addBookModal.hide();
+
+          // Show the success modal
+          successModal.show();
+        });
+      });
+    </script>
 
     <!--Nav Dropdown auto collapse-->
     <script>
@@ -1079,5 +1185,9 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+    <!--Font Awesome Import-->
+
+    <script src="https://kit.fontawesome.com/24e05242b3.js" crossorigin="anonymous"></script>
   </body>
 </html>
