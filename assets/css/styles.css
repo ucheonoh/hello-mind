@@ -35,6 +35,11 @@ h2,
 h3 {
   font-family: "Playfair Display", serif;
 }
+
+h2,
+h3 {
+    color: var(--color-primary);
+}
 body,
 p,
 li {
@@ -79,6 +84,13 @@ li {
   height: 50px;
 
 }
+ .hero-text {
+  color: var(--color-primary);
+  text-shadow: 
+    0 0 5px white,
+    0 0 10px white,
+    0 0 15px white;
+ }
 
 .carousel-item {
   color:var(--color-dark);
