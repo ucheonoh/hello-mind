@@ -61,22 +61,32 @@ li {
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column; /* Stack items vertically */
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 12px;
- 
-  
-}
+
 
 .hero h1 {
   font-size: 2.5rem;
 }
 
+#hero-logo {
+  position: absolute;
+  top: 40px; /* distance from top of hero */
+  z-index: 2;
+  height: 50px;
+
+}
+
+.carousel-item {
+  color:var(--color-dark);
+  text-shadow: 
+    0 0 5px white,
+    0 0 10px white,
+    0 0 15px white;
+}
 
 
 /*common issues*/
