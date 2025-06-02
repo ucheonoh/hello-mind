@@ -61,7 +61,7 @@ Hello Mind is a mental health awareness website offering calming design, accessi
 
 ## Preview
 Live preview: (https://ucheonoh.github.io/hello-mind/)  
-Screenshots: *[optional – add links or embed images]*
+
 
 ---
 
@@ -70,7 +70,7 @@ Screenshots: *[optional – add links or embed images]*
 - Add anonymous feedback form
 - Introduce dark mode toggle
 - Translate site into multiple languages
-
+- Page for charities and donations
 ---
 
 ## Credits
@@ -78,5 +78,5 @@ Screenshots: *[optional – add links or embed images]*
 - Bootstrap framework: [getbootstrap.com](https://getbootstrap.com)
 - Fonts: Google Fonts (Work Sans & Playfair Display)
 - Images: AI-generated and open-license sources
-- Assisted and accelerated with ChatGPT (OpenAI)
+- Assisted and accelerated with ChatGPT and Copilot (OpenAI)
 

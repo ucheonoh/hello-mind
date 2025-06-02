@@ -85,13 +85,14 @@
           src="assets/images/hm-head.png"
           id="hero-logo"
           style="height: 100px"
-          alt="Hello Mind Logo"
+          alt="Hello Mind Hero Logo"
         >
-        <h1><span class="hero-text">IT</span> is ok. <span class="hero-text">YOU</span> don't have to be.</h1>
+        <h1 id="hero-text"><span class="hero-text-green">IT</span> is ok. <span class="hero-text-green">YOU</span> don't have to be.</h1>
         <!--Carousel-->
       </section>
     </header>
 
+    <main>
     <!--Common Issues-->
 
     <section class="py-5 bg-light sect" id="topics">
@@ -280,7 +281,7 @@
       </div>
     </section>
 
-    <!--Carousel 2-->
+    <!--Carousel-->
     <div
       id="affirmationCarousel"
       class="carousel slide text-center my-3"
@@ -503,10 +504,10 @@
               </li>
               <li class="list-group-item">
                 Use free mindfulness tools like
-                <a href="https://www.headspace.com" target="_blank"
+                <a href="https://www.headspace.com" aria-label="Visit Headspace.com (Opens in new tab)" target="_blank"
                   >Headspace</a
                 >
-                or <a href="https://www.calm.com" target="_blank">Calm</a>.
+                or <a href="https://www.calm.com" aria-label="Visit Calm.com (Opens in new tab)"target="_blank">Calm</a>.
               </li>
             </ul>
           </div>
@@ -888,6 +889,8 @@
       </div>
     </section>
 
+    </main>
+
     <section id="reading-list" class="py-5 bg-light sect">
       <div class="container">
         <h2 class="text-center mb-4">📚 Community Reading List</h2>
@@ -985,6 +988,7 @@
                   href="https://www.mind.org.uk/"
                   target="_blank"
                   class="text-decoration-none"
+                  aria-label= "Go to Mind.org (open in a new tab)"
                   >Mind</a
                 >
               </li>
@@ -994,6 +998,7 @@
                   target="_blank"
                   class="text-decoration-none"
                   >Shout (Text 85258)</a
+                  aria-label= "Go to shout.org (open in a new tab)"
                 >
               </li>
             </ul>
@@ -1037,12 +1042,12 @@
           <form id="suggestionForm">
             <div class="modal-body">
               <div class="mb-3">
-                <label for="bookTitle" class="form-label">Book Title</label>
+                <label for="bookLink" class="form-label">Link to book on Amazon</label>
                 <input
-                  type="text"
+                  type="url"
                   class="form-control"
-                  id="bookTitle"
-                  placeholder="Enter the book title"
+                  id="bookLink"
+                  placeholder="Paste Amazon link"
                   required
                 >
               </div>
@@ -1065,6 +1070,7 @@
                   id="bookNotes"
                   rows="3"
                   placeholder="Optional notes about the book..."
+                  required
                 ></textarea>
               </div>
             </div>
@@ -1150,38 +1156,46 @@
       document.addEventListener("DOMContentLoaded", () => {
         const navbarCollapse = document.querySelector(".navbar-collapse");
         const collapseInstance =
-          bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
-
-        // Prevent navbar collapse on dropdown toggle clicks (keeps dropdown open)
-        document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
-          toggle.addEventListener("click", (e) => e.stopPropagation());
-        });
-
-        // Collapse navbar immediately on normal nav links (excluding dropdown toggles)
-        document
-          .querySelectorAll(".navbar-collapse .nav-link:not(.dropdown-toggle)")
-          .forEach((link) => {
-            link.addEventListener("click", () => {
-              if (window.innerWidth < 992) {
-                collapseInstance.hide();
-              }
-            });
-          });
-
-        // When dropdown is hidden (fully closed), collapse the navbar
-        navbarCollapse.querySelectorAll(".dropdown").forEach((dropdown) => {
-          dropdown.addEventListener("hidden.bs.dropdown", () => {
-            // Only collapse navbar if it's open and screen is small
-            if (
-              window.innerWidth < 992 &&
-              navbarCollapse.classList.contains("show")
-            ) {
+          bootstrap.Collapse.getInstance(navbarCollapse) ||
+          new bootstrap.Collapse(navbarCollapse, { toggle: false });
+    
+        // Collapse navbar on any nav-link click (excluding dropdown-toggle)
+        document.querySelectorAll(".navbar-collapse .nav-link:not(.dropdown-toggle)").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth < 992) {
               collapseInstance.hide();
             }
           });
         });
+    
+        // ✅ Collapse navbar on dropdown item click AND close dropdown
+        document.querySelectorAll(".dropdown-menu .dropdown-item").forEach((item) => {
+          item.addEventListener("click", () => {
+            if (window.innerWidth < 992) {
+              // Close dropdown manually
+              const parentDropdown = item.closest(".dropdown");
+              const toggle = parentDropdown.querySelector(".dropdown-toggle");
+    
+              if (bootstrap.Dropdown.getInstance(toggle)) {
+                bootstrap.Dropdown.getInstance(toggle).hide();
+              }
+    
+              collapseInstance.hide();
+            }
+          });
+        });
+    
+        // Prevent navbar from closing when clicking the dropdown toggle
+        document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+          toggle.addEventListener("click", (e) => e.stopPropagation());
+        });
       });
     </script>
+    
+    
+    
+
+    
 
     <!--Bootstrap JS-->
 

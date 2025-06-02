@@ -18,6 +18,11 @@
 body {
   background-color: var(--color-background);
   color: var(--color-dark);
+
+}
+
+#affirmationCarousel {
+  background-color: var(--color-background) ;
 }
 a {
   color: var(--color-primary);
@@ -84,20 +89,27 @@ li {
   height: 50px;
 
 }
- .hero-text {
-  color: var(--color-primary);
+#hero-text {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  border-radius: 40px;
+  color: white;
+  
+ }
+
+ .hero-text-green {
+  color: white;
   text-shadow: 
-    0 0 5px white,
-    0 0 10px white,
-    0 0 15px white;
+    2px 2px 0px rgb(32, 118, 45),
+    4px 4px 5px rgba(32, 118, 45, 0.5);
  }
 
 .carousel-item {
   color:var(--color-dark);
   text-shadow: 
-    0 0 5px white,
-    0 0 10px white,
-    0 0 15px white;
+    0 0 5px var(--color-gray),
+    0 0 10px var(--color-gray),
+    0 0 15px var(--color-gray);
 }
 
 
