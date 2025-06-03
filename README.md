@@ -61,7 +61,7 @@ Hello Mind is a mental health awareness website offering calming design, accessi
 
 ## Preview
 Live preview: (https://ucheonoh.github.io/hello-mind/)  
-
+Screenshots: (https://docs.google.com/document/d/1tfbbnqkHCcJ9pOW0d0I4LntSiJAl4pUP4s9hHCWc5FM/edit?usp=sharing)
 
 ---
 
