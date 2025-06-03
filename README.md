@@ -57,6 +57,8 @@ Hello Mind is a mental health awareness website offering calming design, accessi
 -  Navigation tested on mobile and tablet
 -  Modal and links tested for interactivity and accessibility
 
+Accessibility reports: (https://docs.google.com/document/d/1SJQIpq6wZGCaM_8IRtub8L3jS2iF2gRPvKkb45IrADY/edit?usp=sharing)
+
 ---
 
 ## Preview
